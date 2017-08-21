@@ -32,6 +32,8 @@
     </script>
     <script>
 
+
+
       var pubnub = new PubNub({
         publishKey: 'demo',
         subscribeKey: 'demo'
@@ -43,7 +45,7 @@
         pubnub: pubnub,
         id: 'map',
         mbToken: 'pk.eyJ1IjoiYWxleGxvY3VzIiwiYSI6ImNqNXYxYmZkNDFyZ2szM24yN21lcHExOHQifQ.qeA76R-k7iN4vjq5UkPWFQ',
-        mbId: 'mapbox.dark',
+        mbId: 'mapbox.pencil',
         channels: [channel],
         connect: connect,
         options: {
@@ -62,8 +64,8 @@
           var new_point = JSON.parse(JSON.stringify(point));
 
           new_point.latlng = [
-            new_point.latlng[0] + (getNonZeroRandomNumber() * 0.1),
-            new_point.latlng[1] + (getNonZeroRandomNumber() * 0.2)
+            new_point.latlng[0] + (getNonZeroRandomNumber() * 0.001),
+            new_point.latlng[1] + (getNonZeroRandomNumber() * 0.002)
           ];
 
           pubnub.publish({
